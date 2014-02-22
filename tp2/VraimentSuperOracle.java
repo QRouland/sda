@@ -5,30 +5,26 @@ public class VraimentSuperOracle implements Oracle {
      * Mémorise une carte du paquet.
      */
     protected Card myCard;
-    private int nbCartes,i;
     private ArrayDeque<Card> myDeque;
-	private ArrayList<Card> myList;
-	
+    private LinkedHashSet<Card> myList;
+
     @Override
     public void showDeck(Deck d) {
-	myDeque = new ArrayDeque<Card>(d.elements());
-	nbCartes = d.count();
+        myDeque = new ArrayDeque<Card>();
+        myList = new LinkedHashSet<Card>(d.elements());
     }
-	
+
     @Override
-    public Card guessFirst() {	
-	i=1;
-	return myDeque.getFirst();
+    public Card guessFirst() {
+        return myList.iterator().next();
     }
-    
+
     @Override
     public Card guessNext(Card prev) {
-		if(i<=nbCartes){
-			myDeque.removeFirstOccurrence(prev);
-			myDeque.addLast(prev);
-			return myDeque.getFirst();
-		}
-		return myDeque.pop();
+        myDeque.add(prev);
+        if(!myList.isEmpty()) myList.remove(prev);
+        if(!myList.isEmpty()) return myList.iterator().next();
+        return myDeque.pop();
     }
 }
 
