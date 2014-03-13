@@ -1,4 +1,4 @@
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -52,7 +52,16 @@ public class Variable implements Expression, Symbol {
 	@Override
 	public int evaluate(Map<Character, Integer> values)
 			throws UnknownVariableException {
-		// TODO Auto-generated method stub
-		return 0;
+		if(values.containsKey(name))
+			return values.get(name);
+		throw(new UnknownVariableException(name+" don't exist ..."));
+	}
+
+
+	@Override
+	public List<Symbol> rpn() {
+		List<Symbol> retour = new LinkedList<Symbol>();
+		retour.add(this);
+		return retour;
 	}
 }

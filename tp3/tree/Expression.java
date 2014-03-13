@@ -1,5 +1,4 @@
-import java.util.Map;
-
+import java.util.*;
 
 /**
  * Interface for all the arithmetic expressions.
@@ -14,4 +13,8 @@ public interface Expression {
  * @throws UnknownVariableException A variable of the expression has no value in the environment
  */
 public int evaluate(Map<Character,Integer> values) throws UnknownVariableException;
+
+
+public List<Symbol> rpn();
+
 }

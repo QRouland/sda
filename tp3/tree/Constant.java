@@ -1,4 +1,4 @@
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -52,7 +52,14 @@ public class Constant implements Expression, Symbol {
 	@Override
 	public int evaluate(Map<Character, Integer> values)
 			throws UnknownVariableException {
-		// TODO Auto-generated method stub
-		return 0;
+		return value;
+	}
+
+
+	@Override
+	public List<Symbol> rpn() {
+		List<Symbol> retour = new LinkedList<Symbol>();
+		retour.add(this);
+		return retour;
 	}
 }

@@ -1,4 +1,4 @@
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -71,12 +71,29 @@ public class Operation implements Expression {
 	public String toString() {
 		return "("+left.toString() +  op.toString() + right.toString()+")";
 	}
-
+	
 	@Override
 	public int evaluate(Map<Character, Integer> values)
 			throws UnknownVariableException {
-		// TODO Auto-generated method stub
-		
-		return left.evaluate(values)+right.evaluate(values);
+		switch(op.toString()){
+		case "+" :
+			return left.evaluate(values)+right.evaluate(values);
+		case "-" :
+			return left.evaluate(values)-right.evaluate(values);
+		case "*" :
+			return left.evaluate(values)*right.evaluate(values);
+		case "/" :
+			return left.evaluate(values)/right.evaluate(values);
+		}
+		return 0;
+	}
+
+	@Override
+	public List<Symbol> rpn() {
+		List<Symbol> retour = new LinkedList<Symbol>();
+		retour.addAll(left.rpn());
+		retour.addAll(right.rpn());
+		retour.add(op);
+		return retour;
 	}
 }
