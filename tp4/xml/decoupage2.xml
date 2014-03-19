@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expr SYSTEM "expr.dtd">
+<!-- Original expression : (b*b)-(4*a*c) -->
+<expr>
+ <binop op="sub" >
+  <expr>
+   <binop op="mul" >
+    <expr>
+     <variable name="b" />
+    </expr>
+    <expr>
+     <variable name="b" />
+    </expr>
+   </binop>
+  </expr>
+  <expr>
+   <binop op="mul" >
+    <expr>
+     <binop op="mul" >
+      <expr>
+       <integer>4</integer>
+      </expr>
+      <expr>
+       <variable name="a" />
+      </expr>
+     </binop>
+    </expr>
+    <expr>
+     <variable name="c" />
+    </expr>
+   </binop>
+  </expr>
+ </binop>
+</expr>

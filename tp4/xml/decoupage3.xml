@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expr SYSTEM "expr.dtd">
+<!-- Original expression : a+x-1 -->
+<expr>
+ <binop op="sub" >
+  <expr>
+   <binop op="add" >
+    <expr>
+     <variable name="a" />
+    </expr>
+    <expr>
+     <variable name="x" />
+    </expr>
+   </binop>
+  </expr>
+  <expr>
+   <integer>1</integer>
+  </expr>
+ </binop>
+</expr>

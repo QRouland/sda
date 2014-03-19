@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expr SYSTEM "expr.dtd">
+<!-- Original expression : x/(2*a) -->
+<expr>
+ <binop op="div" >
+  <expr>
+   <variable name="x" />
+  </expr>
+  <expr>
+   <binop op="mul" >
+    <expr>
+     <integer>2</integer>
+    </expr>
+    <expr>
+     <variable name="a" />
+    </expr>
+   </binop>
+  </expr>
+ </binop>
+</expr>

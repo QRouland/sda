@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expr SYSTEM "expr.dtd">
+<!-- Original expression : 1+(10+(100+1000)) -->
+<expr>
+ <binop op="add" >
+  <expr>
+   <integer>1</integer>
+  </expr>
+  <expr>
+   <binop op="add" >
+    <expr>
+     <integer>10</integer>
+    </expr>
+    <expr>
+     <binop op="add" >
+      <expr>
+       <integer>100</integer>
+      </expr>
+      <expr>
+       <integer>1000</integer>
+      </expr>
+     </binop>
+    </expr>
+   </binop>
+  </expr>
+ </binop>
+</expr>

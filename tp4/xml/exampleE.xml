@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expr SYSTEM "expr.dtd">
+<expr>
+  <binop op="add">
+    <expr>
+      <variable name="x" />
+    </expr><expr>
+      <integer>1</integer>
+    </expr>
+  </binop>
+</expr>

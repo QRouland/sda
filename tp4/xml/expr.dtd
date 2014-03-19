@@ -1,0 +1,6 @@
+<!ELEMENT expr (binop | variable | integer)>
+<!ELEMENT binop (expr, expr)>
+<!ATTLIST binop op (add|sub|mul|div) #REQUIRED>
+<!ELEMENT variable EMPTY>
+<!ATTLIST variable name CDATA #REQUIRED>
+<!ELEMENT integer (#PCDATA)>
