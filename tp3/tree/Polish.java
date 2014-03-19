@@ -8,7 +8,7 @@ public class Polish {
 					pile.push(Integer.valueOf(liste.get(0).toString()));
 
 			if(liste.get(0).getClass().equals(Variable.class))
-					pile.push(values.get((liste.get(0))))f ;
+					pile.push(values.get((liste.get(0))));
 
 			if(liste.get(0).getClass().equals(Operator.class)){
 					Integer droite = pile.pop();
