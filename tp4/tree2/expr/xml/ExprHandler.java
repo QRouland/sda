@@ -10,6 +10,8 @@ import Expression.Parser.*;
 
 public class ExprHandler extends DefaultHandler{
 
+	public Expression finalExpression=null;
+	
 	private Stack<String> pile = new Stack<String>();
 	private Stack<Symbol> pileSymbol = new Stack<Symbol>();
 	private Stack<Expression> pileBG = new Stack<Expression>();
@@ -31,8 +33,8 @@ public class ExprHandler extends DefaultHandler{
 			myExp = Builder.fromString(pile.pop());
 		} catch (Exception e) { throw (SAXException)e; }
 		System.out.println(myExp);*/
-		System.out.println(pileBG.pop());
-		
+		finalExpression = pileBG.pop();
+//		System.out.println(finalExpression);
 	}
 
 	@Override
